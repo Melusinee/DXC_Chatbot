@@ -20,6 +20,6 @@ public interface IMeetingDao {
     })
     List<Meeting> findAll();
 
-    @Select("select * from meeting where id = #{id}")
-    List<Meeting> findMeetingById(Integer id);
+    @Select("select * from meeting where id = #{meetingId}")
+    List<Meeting> findMeetingById(Integer meetingId);
 }

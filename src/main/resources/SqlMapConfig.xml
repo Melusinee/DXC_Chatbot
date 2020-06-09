@@ -27,6 +27,6 @@
     </environments>
 
     <mappers>
-        <package name="dxc.com.au.dao"/>
-    </mappers>
+<!--        <package name="dxc.com.au.dao"/>-->
+        <mapper resource="dxc/com/au/dao/IStaffDao.xml"/></mappers>
 </configuration>

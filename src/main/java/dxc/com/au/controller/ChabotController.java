@@ -1,6 +1,9 @@
 package dxc.com.au.controller;
 
+import dxc.com.au.dao.IStaffDao;
+import dxc.com.au.domain.Staff;
 import dxc.com.au.service.MeetingService;
+import dxc.com.au.service.StaffService;
 import org.alicebot.ab.Bot;
 import org.alicebot.ab.Chat;
 import org.alicebot.ab.MagicBooleans;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
+import java.net.Socket;
 
 @Controller
 public class ChabotController {
@@ -23,6 +27,9 @@ public class ChabotController {
 
     @Autowired
     private MeetingService meetingService;
+    @Autowired
+    private StaffService staffService;
+    private IStaffDao staffDao;
 
     @RequestMapping(value = "/botResponse",method = RequestMethod.GET)
     @ResponseBody
@@ -53,10 +60,25 @@ public class ChabotController {
                     response = "I will ask another bot to help you";
                 }
                 if(message.toLowerCase().startsWith("find all meetings")){
-                    meetingService.init();
                     String meetings = meetingService.findAllMeetings().toString();
-                    meetingService.destory();
                     response = "--  Finding " + meetings + " for you now ";
+                }
+                if(message.toLowerCase().startsWith("find all staffs")){
+                    String staffs = staffService.findAllStaffs().toString();
+                    response = "-- Finding " + staffs + "for you now ";
+                }
+                // intended to use "we have a new staff named Charles with id 2"
+                if(message.toLowerCase().startsWith("we have a new staff")){
+//                    System.out.println("enter add staff function");
+                    String name = message.split(" ")[6];
+                    Integer id = Integer.parseInt(message.split(" ")[9]);
+                    Integer meetingId = 1;
+                    Staff staff = new Staff();
+                    staff.setName(name);
+                    staff.setId(id);
+                    staff.setMeetingId(meetingId);
+                    staffDao.saveStaff(staff);
+                    response = "Already saved staff" + staff.toString();
                 }
                 response = overWriteBotResponse(response);
                 return response;

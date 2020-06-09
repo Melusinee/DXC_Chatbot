@@ -19,7 +19,6 @@ public class MeetingServiceImpl implements MeetingService {
     private InputStream in;
     private SqlSessionFactory factory;
     private SqlSession session;
-    private IStaffDao iStaffDao;
     private IMeetingDao iMeetingDao;
 
     @Override
@@ -28,7 +27,6 @@ public class MeetingServiceImpl implements MeetingService {
         factory = new SqlSessionFactoryBuilder().build(in);
         session = factory.openSession();
         iMeetingDao = session.getMapper(IMeetingDao.class);
-        iStaffDao = session.getMapper(IStaffDao.class);
     }
 
     @Override
@@ -39,8 +37,10 @@ public class MeetingServiceImpl implements MeetingService {
     }
 
     @Override
-    public List<Meeting> findAllMeetings() {
+    public List<Meeting> findAllMeetings() throws Exception {
+        init();
         List<Meeting> meetings = iMeetingDao.findAll();
+        destory();
         return meetings;
     }
 }
