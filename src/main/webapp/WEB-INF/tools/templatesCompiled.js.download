@@ -1,0 +1,514 @@
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['hbCards-old'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "	"
+    + ((stack1 = (helpers.extractTags || (depth0 && depth0.extractTags) || alias2).call(alias1,depth0,{"name":"extractTags","hash":{},"data":data})) != null ? stack1 : "")
+    + "\r\n	<!-- TODO: Create helper to create class -->\r\n	<div class=\"card filter "
+    + ((stack1 = (helpers.createFilterClass || (depth0 && depth0.createFilterClass) || alias2).call(alias1,depth0,{"name":"createFilterClass","hash":{},"data":data})) != null ? stack1 : "")
+    + "\">\r\n		<a onclick='trackCardsLink(\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\")' href= 'javascript:window.open(\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\")'>\r\n		<h5 class=\"card-header\">"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h5>\r\n		<!-- TODO: Add helper to check if empty string -->\r\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.thumbnail : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
+    + "		</a>\r\n		<div class=\"card-block\">\r\n			<!-- TODO: Insert Icons -->\r\n			<p class=\"card-text\">"
+    + alias4(((helper = (helper = helpers.about || (depth0 != null ? depth0.about : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"about","hash":{},"data":data}) : helper)))
+    + "</p>\r\n		</div>\r\n		<div class=\"card-footer\">\r\n			<small class=\"text-muted\">Author: "
+    + alias4(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"author","hash":{},"data":data}) : helper)))
+    + "</small><br>\r\n			<small class=\"text-muted\">Updated: "
+    + alias4((helpers.formatDate || (depth0 && depth0.formatDate) || alias2).call(alias1,(depth0 != null ? depth0.created : depth0),{"name":"formatDate","hash":{},"data":data}))
+    + "</small><br>\r\n			<!-- TODO: Create Helper for Hashtags -->\r\n			<small class=\"text-muted\">"
+    + ((stack1 = (helpers.hashtags || (depth0 && depth0.hashtags) || alias2).call(alias1,depth0,{"name":"hashtags","hash":{},"data":data})) != null ? stack1 : "")
+    + "</small>\r\n		</div>\r\n	</div>\r\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "			<img class=\"card-img-top img-fluid center-block card-image\" src=\""
+    + container.escapeExpression(((helper = (helper = helpers.thumbnail || (depth0 != null ? depth0.thumbnail : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"thumbnail","hash":{},"data":data}) : helper)))
+    + "\" alt=\"Card image cap\" ></a>\r\n";
+},"4":function(container,depth0,helpers,partials,data) {
+    return "			<img class=\"card-img-top img-fluid center-block card-image\" src=\"./images/content/dxc.png\" alt=\"Card image cap\" ></a>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"card-columns\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.data : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>";
+},"useData":true});
+templates['hbCards2'] = template({"1":function(container,depth0,helpers,partials,data) {
+    return "";
+},"3":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "		<img class=\"card-img-top img-fluid mx-auto card-image\" src=\""
+    + container.escapeExpression(((helper = (helper = helpers.thumbnail || (depth0 != null ? depth0.thumbnail : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"thumbnail","hash":{},"data":data}) : helper)))
+    + "\" alt=\"Card image cap\"></a>\r\n";
+},"5":function(container,depth0,helpers,partials,data) {
+    return "	<img class=\"card-img-top img-fluid mx-auto card-image\" src=\"./images/content/dxc.png\" alt=\"Card image cap\"></a>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return ((stack1 = (helpers.extractTags || (depth0 && depth0.extractTags) || alias2).call(alias1,depth0,{"name":"extractTags","hash":{},"data":data})) != null ? stack1 : "")
+    + "\r\n<!-- TODO: Create helper to create class -->\r\n<div class=\"card innovation-item m-1 filter "
+    + ((stack1 = (helpers.createFilterClass || (depth0 && depth0.createFilterClass) || alias2).call(alias1,depth0,{"name":"createFilterClass","hash":{},"data":data})) != null ? stack1 : "")
+    + "\">\r\n	<a href='javascript:window.open(\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\")'>\r\n"
+    + ((stack1 = (helpers.validateCardTitle || (depth0 && depth0.validateCardTitle) || alias2).call(alias1,depth0,(depth0 != null ? depth0.link : depth0),(depth0 != null ? depth0.title : depth0),{"name":"validateCardTitle","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(1, data, 0),"data":data})) != null ? stack1 : "")
+    + "		<!-- TODO: Add helper to check if empty string -->\r\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.thumbnail : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data})) != null ? stack1 : "")
+    + "	</a>\r\n	<div class=\"card-block\">\r\n		<!-- TODO: Insert Icons -->\r\n		<p class=\"card-text break-text\">"
+    + alias4(((helper = (helper = helpers.summary || (depth0 != null ? depth0.summary : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"summary","hash":{},"data":data}) : helper)))
+    + "</p>\r\n	</div>\r\n	<div class=\"card-footer\">\r\n		<small class=\"text-muted\">Author: "
+    + alias4(((helper = (helper = helpers.source || (depth0 != null ? depth0.source : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"source","hash":{},"data":data}) : helper)))
+    + "</small><br>\r\n		<small class=\"text-muted\">Updated: "
+    + alias4((helpers.formatDate || (depth0 && depth0.formatDate) || alias2).call(alias1,(depth0 != null ? depth0.published : depth0),{"name":"formatDate","hash":{},"data":data}))
+    + "</small><br>\r\n		<!-- TODO: Create Helper for Hashtags -->\r\n		<small class=\"text-muted\">"
+    + ((stack1 = (helpers.hashtags || (depth0 && depth0.hashtags) || alias2).call(alias1,depth0,{"name":"hashtags","hash":{},"data":data})) != null ? stack1 : "")
+    + "</small>\r\n	</div>\r\n</div>";
+},"useData":true});
+templates['hbCurrentFilters'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["filter-category"] : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "		<div>\r\n			<div class=\"filter-title\" role=\"tab\" id=\"heading"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n				<a class=\"category-filter\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapse"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\" aria-expanded=\"true\" aria-controls=\"collapse"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n					"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\r\n				</a> \r\n			</div>\r\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["class"] : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "			<div id=\"collapse"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\" class=\"collapse show filter-content\" role=\"tabpanel\" aria-labelledby=\"heading"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n				<div>\r\n"
+    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.filter : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "				</div>\r\n			</div>\r\n		</div>\r\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    return "			<div class=\"card-filter-view\">\r\n			</div>\r\n";
+},"5":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=container.escapeExpression;
+
+  return "					<a class=\"filter-button\" data-filter=\""
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["class"] : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + "\">\r\n						"
+    + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === "function" ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\r\n						<span class=\"badge counter "
+    + alias3((helpers.filterButtonClass || (depth0 && depth0.filterButtonClass) || alias2).call(alias1,(depth0 != null ? depth0.title : depth0),{"name":"filterButtonClass","hash":{},"data":data}))
+    + "\"></span>\r\n					</a>\r\n					<br>\r\n";
+},"6":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return container.escapeExpression(((helper = (helper = helpers["class"] || (depth0 != null ? depth0["class"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"class","hash":{},"data":data}) : helper)));
+},"8":function(container,depth0,helpers,partials,data) {
+    return container.escapeExpression((helpers.filterButtonClass || (depth0 && depth0.filterButtonClass) || helpers.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.title : depth0),{"name":"filterButtonClass","hash":{},"data":data}));
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"card\" id=\"accordion\" role=\"tablist\" aria-multiselectable=\"true\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["filter-row"] : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>\r\n";
+},"useData":true});
+templates['hbEvents'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "		<img class=\"card-img-top img-fluid mx-auto card-image\" src=\""
+    + container.escapeExpression(((helper = (helper = helpers.thumbnail || (depth0 != null ? depth0.thumbnail : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"thumbnail","hash":{},"data":data}) : helper)))
+    + "\" alt=\"Card image cap\"></a>\r\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    return "		<img class=\"card-img-top img-fluid mx-auto card-image\" src=\"./images/content/dxc.png\" alt=\"Card image cap\"></a>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<!-- TODO: Create helper to create class -->\r\n<div class=\"card m-1\">\r\n	<a href='javascript:window.open(\""
+    + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
+    + "\")'>\r\n		<h5 class=\"card-header\">"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h5>\r\n		\r\n		<!-- TODO: Add helper to check if empty string -->\r\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.thumbnail : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "	</a>\r\n	<div class=\"card-block\">\r\n		<!-- TODO: Insert Icons -->\r\n		<p class=\"card-text\">"
+    + alias4(((helper = (helper = helpers.summary || (depth0 != null ? depth0.summary : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"summary","hash":{},"data":data}) : helper)))
+    + "</p>\r\n	</div>\r\n	<div class=\"card-footer\">\r\n		<small class=\"text-muted\">Event Date &amp; Time: "
+    + alias4(((helper = (helper = helpers.start || (depth0 != null ? depth0.start : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"start","hash":{},"data":data}) : helper)))
+    + "</small><br>\r\n		<small class=\"text-muted\">Location: "
+    + alias4(((helper = (helper = helpers.location || (depth0 != null ? depth0.location : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"location","hash":{},"data":data}) : helper)))
+    + "</small><br>\r\n		<!-- TODO: Create Helper for Hashtags -->\r\n		<small class=\"text-muted\">"
+    + ((stack1 = (helpers.hashtags || (depth0 && depth0.hashtags) || alias2).call(alias1,depth0,{"name":"hashtags","hash":{},"data":data})) != null ? stack1 : "")
+    + "</small>\r\n	</div>\r\n</div>";
+},"useData":true});
+templates['hbFilters-old'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"card-deck m-2\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["filter-category"] : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>\r\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "	<div class=\"card\">\r\n		<div class=\"card-block card-footer\">\r\n			<h5 class=\"card-title\">"
+    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h5>\r\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["class"] : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "			<div align=\"center\">\r\n"
+    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.filter : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "			</div>\r\n		</div>\r\n	</div>\r\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    return "			<div class=\"card-filter-view\"></div>\r\n";
+},"5":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=container.escapeExpression;
+
+  return "				<button class=\"btn filter-button btn-sm m-1\" data-filter=\""
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["class"] : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + "\">\r\n					"
+    + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === "function" ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\r\n					<span class=\"badge counter "
+    + alias3((helpers.filterButtonClass || (depth0 && depth0.filterButtonClass) || alias2).call(alias1,(depth0 != null ? depth0.title : depth0),{"name":"filterButtonClass","hash":{},"data":data}))
+    + "\"></span>\r\n				</button>\r\n";
+},"6":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return container.escapeExpression(((helper = (helper = helpers["class"] || (depth0 != null ? depth0["class"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"class","hash":{},"data":data}) : helper)));
+},"8":function(container,depth0,helpers,partials,data) {
+    return container.escapeExpression((helpers.filterButtonClass || (depth0 && depth0.filterButtonClass) || helpers.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.title : depth0),{"name":"filterButtonClass","hash":{},"data":data}));
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["filter-row"] : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n<div class=\"m-5\">\r\n	<hr>\r\n</div>\r\n";
+},"useData":true});
+templates['hbFilters'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["filter-category"] : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "		<div>\r\n			<div class=\"filter-title\" role=\"tab\" id=\"heading"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n				<a class=\"category-filter\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapse"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\" aria-expanded=\"true\" aria-controls=\"collapse"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n					"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\r\n				</a> \r\n			</div>\r\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["class"] : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "			<div id=\"collapse"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\" class=\"collapse show filter-content\" role=\"tabpanel\" aria-labelledby=\"heading"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n				<div>\r\n"
+    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.filter : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "				</div>\r\n			</div>\r\n		</div>\r\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    return "			<div class=\"card-filter-view\">\r\n			</div>\r\n";
+},"5":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=container.escapeExpression;
+
+  return "					<a class=\"filter-button\" data-filter=\""
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["class"] : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + "\">\r\n						"
+    + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === "function" ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\r\n						<span class=\"badge counter "
+    + alias3((helpers.filterButtonClass || (depth0 && depth0.filterButtonClass) || alias2).call(alias1,(depth0 != null ? depth0.title : depth0),{"name":"filterButtonClass","hash":{},"data":data}))
+    + "\"></span>\r\n					</a>\r\n					<br>\r\n";
+},"6":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return container.escapeExpression(((helper = (helper = helpers["class"] || (depth0 != null ? depth0["class"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"class","hash":{},"data":data}) : helper)));
+},"8":function(container,depth0,helpers,partials,data) {
+    return container.escapeExpression((helpers.filterButtonClass || (depth0 && depth0.filterButtonClass) || helpers.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.title : depth0),{"name":"filterButtonClass","hash":{},"data":data}));
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"card\" id=\"accordion\" role=\"tablist\" aria-multiselectable=\"true\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["filter-row"] : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>\r\n";
+},"useData":true});
+templates['hbFooter'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "";
+},"useData":true});
+templates['hbHead'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<title>DXC Technology | ANZ - How We Innovate to Lead and Grow</title>\r\n\r\n<!-- TODO: Add favicon -->\r\n\r\n\r\n\r\n<!-- TODO: Port over wws.min.css to custom -->\r\n<link rel=\"stylesheet\" href=\"./css/wws.min.css\">\r\n<link rel=\"stylesheet\" href=\"./css/bootstrap.min.css\">\r\n\r\n<link rel=\"stylesheet\" href=\"./css/font-awesome.min.css\">\r\n\r\n<link rel=\"stylesheet\" href=\"./css/dxc.css\">\r\n\r\n<script src=\"./js/analytics-events.js\"></script>\r\n<script src=\"./js/config.js\"></script>\r\n\r\n<!-- jquery Related -->\r\n\r\n<!-- Bootstrap Related -->\r\n<script src=\"./js/tether.min.js\"></script>\r\n<script src=\"./js/bootstrap.min.js\"></script>\r\n\r\n<!-- Used for sideshow -->\r\n<script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js\"></script>\r\n\r\n<!-- All custom functions -->\r\n<script src=\"./js/script.js\"></script>\r\n\r\n<script src=\"./js/intro.min.js\"></script>\r\n<script src=\"./js/dxc-wwi.js\"></script>\r\n\r\n<!-- Used for font resizing -->\r\n<script src=\"./js/jquery.textfill.min.js\"></script>\r\n\r\n<script src=\"https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js\"></script>\r\n<script src=\"https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js\"></script>\r\n<script src=\"./js/nav-test.js\"></script>\r\n\r\n<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\r\n<script src=\"https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js\"></script>";
+},"useData":true});
+templates['hbIndex'] = template({"1":function(container,depth0,helpers,partials,data) {
+    return "			<div class=\"spotlight\">\r\n				<img src=\"./images/slideshow/slideshow1.jpg\" alt=\"Innovation Content\">\r\n				<div class=\"overlay\">\r\n					<h2>Innovation Content</h2>\r\n					<p>Click here to find out more about applied innovations at DXC in the ANZ region.</p>\r\n					<a class=\"button small\" href=\"sandpit/card-columns.html\">View innovation content at DXC</a>\r\n				</div>\r\n			</div>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div id=\"content\" class=\"js-tour\" data-tourid=\"38\">\r\n	<div id=\"index-left\">\r\n		<div id=\"slideshow\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.spotlight : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "		</div>\r\n	</div>\r\n</div>\r\n\r\n";
+},"useData":true});
+templates['hbMain'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div id=\"content\">\r\n	<div id=\"index-left\">\r\n	<section id=\"slideshow\" class=\"slider\"></section>\r\n\r\n	</div>\r\n	<div id=\"index-right\"></div>\r\n</div>";
+},"useData":true});
+templates['hbModal'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "		<div class=\"card card-colour\" align=\"center\">\r\n			<div class=\"card-header card-colour\">\r\n				<h4 class=\"card-title card-content\">"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h4>\r\n			</div>\r\n			<img class=\"card-img-top img-fluid center-block\" src=\""
+    + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
+    + "\" style=\"width:50%;\" alt=\"Thought Leadership\">\r\n			<div class=\"card-block\">\r\n				<p class=\"card-text card-content\">"
+    + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
+    + "</p>\r\n			</div>\r\n		</div>\r\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    return "";
+},"5":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(6, data, 0),"data":data})) != null ? stack1 : "");
+},"6":function(container,depth0,helpers,partials,data) {
+    return "	";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "<div class=\"modal-header card-colour\">\r\n	<h3 class=\"card-content\" id=\"exampleModalLabel\"><strong>"
+    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.data : depth0)) != null ? stack1.title : stack1), depth0))
+    + "</strong></h3>\r\n	<!-- <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n											<span aria-hidden=\"true\">&times;</span>\r\n										</button> -->\r\n</div>\r\n\r\n<div class=\"modal-body\">\r\n	<div class=\"card-group\">\r\n"
+    + ((stack1 = helpers.each.call(alias1,((stack1 = (depth0 != null ? depth0.data : depth0)) != null ? stack1.spoke : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "	</div>\r\n</div>\r\n\r\n<div class=\"modal-footer\">\r\n"
+    + ((stack1 = (helpers.validate2spokes || (depth0 && depth0.validate2spokes) || helpers.helperMissing).call(alias1,((stack1 = (depth0 != null ? depth0.metadata : depth0)) != null ? stack1.category : stack1),((stack1 = (depth0 != null ? depth0.metadata : depth0)) != null ? stack1.spoke : stack1),{"name":"validate2spokes","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data})) != null ? stack1 : "")
+    + "\r\n</div>";
+},"useData":true});
+templates['hbMoreSpotlights'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "	<div class=\"spotlight-row\" id=\"spotlight-"
+    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+    + "\">\r\n		<div class=\"spotlight-thumb\">\r\n			<img src=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\" alt=\""
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\">\r\n		</div>\r\n		<div class=\"spotlight-list\">\r\n			<div class=\"inner\">\r\n				<h4>"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h4>\r\n				<p>"
+    + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
+    + "</p>\r\n				<a class=\"action-link small no-icon\" href=\"https://whatwesell.hpe.com/dxc/client-messaging/digital-enterprise/\">Read and share the papers</a>\r\n			</div>\r\n		</div>\r\n	</div>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div id=\"spotlights\">\r\n	<h3>More Spotlights</h3>\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.spotlights : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>";
+},"useData":true});
+templates['hbNav'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "  "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["sub-nav-item"] : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + " ";
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "\r\n			<li class=\"nav-item dropdown\">\r\n				<a class=\"nav-link dropdown-toggle main-red\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n					"
+    + container.escapeExpression(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\r\n				</a>\r\n\r\n				<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n					"
+    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0["sub-nav-item"] : depth0),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n				</div>\r\n			</li>\r\n			 ";
+},"3":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return " "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["data-filter"] : depth0),{"name":"if","hash":{},"fn":container.program(4, data, 0),"inverse":container.program(6, data, 0),"data":data})) != null ? stack1 : "")
+    + " ";
+},"4":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "\r\n					<a class=\"dropdown-item filter-link main-red\" data-filter=\""
+    + alias4(((helper = (helper = helpers["data-filter"] || (depth0 != null ? depth0["data-filter"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"data-filter","hash":{},"data":data}) : helper)))
+    + "\" href=\""
+    + alias4(((helper = (helper = helpers["sub-nav-link"] || (depth0 != null ? depth0["sub-nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackSubNavLink(\""
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "\")'>"
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "</a> ";
+},"6":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "\r\n					<a class=\"dropdown-item main-red\" href=\""
+    + alias4(((helper = (helper = helpers["sub-nav-link"] || (depth0 != null ? depth0["sub-nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackNavigationLink(\""
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "\")'>"
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "</a> ";
+},"8":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return " "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["data-filter"] : depth0),{"name":"if","hash":{},"fn":container.program(9, data, 0),"inverse":container.program(11, data, 0),"data":data})) != null ? stack1 : "")
+    + " ";
+},"9":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "\r\n			<li class=\"nav-item\">\r\n				<a class=\"nav-link filter-link main-red\" data-filter=\""
+    + alias4(((helper = (helper = helpers["data-filter"] || (depth0 != null ? depth0["data-filter"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"data-filter","hash":{},"data":data}) : helper)))
+    + "\" href=\""
+    + alias4(((helper = (helper = helpers["nav-link"] || (depth0 != null ? depth0["nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackMainNavLink(\""
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\")' aria-haspopup=\"true\" aria-expanded=\"false\">\r\n					"
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\r\n				</a>\r\n			</li>\r\n";
+},"11":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "			<li class=\"nav-item\">\r\n				<a class=\"nav-link main-red\" href=\""
+    + alias4(((helper = (helper = helpers["nav-link"] || (depth0 != null ? depth0["nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackMainNavLink(\""
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\")' aria-haspopup=\"true\" aria-expanded=\"false\">\r\n					"
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\r\n				</a>\r\n			</li>\r\n			";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div id=\"header\">\r\n	<div id=\"top-row\" class=\"\">\r\n		<div class=\"row\">\r\n			<div id=\"logo\" class=\"hide-for-small\">\r\n				<a href=\"./index.html\" onclick='trackMainNavLink(\"DXC Logo\")'>\r\n					<img alt=\"DXC Technology\" src=\"./images/styles/logo-print-blk.png\" class=\"print-only\">\r\n					DXC Technology\r\n				</a>\r\n			</div>\r\n		</div>\r\n	</div>\r\n\r\n	<!-- Department Row -->\r\n	<div id=\"department-row\" class=\"\">\r\n		<div class=\"row\">\r\n			<div class=\"col\">\r\n				<a href=\"#\" class=\"left-off-canvas-toggle menu-icon hide-for-xlarge-up\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\"><i class=\"fa fa-bars\"></i></a>\r\n				<div class=\"divider hide-for-xlarge-up\"></div>\r\n				<div class=\"site-title hide-text\">\r\n					ANZ - How We Innovate to LEAD AND GROW\r\n				</div>\r\n			</div>\r\n				<div style=\"text-align:right\" class=\"site-title\">\r\n					The Innovation Metropolis\r\n				</div>\r\n		</div>\r\n	</div>\r\n</div>\r\n\r\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n	<div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n		<ul class=\"navbar-nav\">\r\n			<li class=\"home-icon main-red\">\r\n				<a href=\"./index.html\" onclick='trackMainNavLink(\"Home\")'>\r\n					<i class=\"fa fa-home\"></i>\r\n				</a>\r\n			</li>\r\n\r\n			"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["main-nav-items"] : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n		</ul>\r\n	</div>\r\n</nav>";
+},"useData":true});
+templates['hbNav2'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div id=\"header\">\r\n	<div id=\"top-row\" class=\"\">\r\n		<div class=\"row\">\r\n			<div id=\"logo\" class=\"hide-for-small\">\r\n				<a href=\"./index.html\" onclick='trackMainNavLink(\"DXC Logo\")'>\r\n					<img alt=\"DXC Technology\" src=\"./images/styles/logo-print-blk.png\" class=\"print-only\">\r\n					DXC Technology\r\n				</a>\r\n			</div>\r\n		</div>\r\n	</div>\r\n\r\n	<!-- Department Row -->\r\n</div>\r\n\r\n<div class=\"bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay-md-down bmd-drawer-in-lg-up\">\r\n	<header class=\"bmd-layout-header\">\r\n		<div class=\"navbar navbar-light bg-faded\">\r\n		<button class=\"navbar-toggler hidden-lg-up\" type=\"button\" data-toggle=\"drawer\" data-target=\"#dw-1\">\r\n			<span class=\"sr-only\">Toggle drawer</span>\r\n			<i class=\"material-icons\">menu</i>\r\n		</button>\r\n		</div>\r\n	</header>\r\n\r\n	<div id=\"dw-1\" class=\"bmd-layout-drawer bg-faded\">\r\n		<header>\r\n			<a class=\"navbar-brand\">MAIN MENU</a>\r\n		</header>\r\n\r\n		<div class=\"list-group\">\r\n			<a class=\"list-group-item\" href=\"./index.html\">Home</a>\r\n			<a class=\"list-group-item\" href=\"./about.html\">About the Metropolis</a>\r\n			<a class=\"list-group-item\" href=\"./innovation-agenda.html\">Content Overview</a>\r\n			<a class=\"list-group-item\" href=\"./asset-analytics.html\">Maps (Content Insights)</a>\r\n			<a class=\"list-group-item\" href=\"./card-columns.html\">Lens (Content)</a>\r\n			<a class=\"list-group-item\" href=\"./innovation-events.html\">Innovation Events</a>\r\n			<a class=\"list-group-item\" href=\"./chatbot.html\">Metropolis Chatbot</a>\r\n			<a class=\"list-group-item\" href=\"./request-service.html\">Request Innovation Services</a>\r\n			<a class=\"list-group-item\" href=\"./content-refresh.html\">Content Refresh</a>\r\n\r\n			<div align=\"center\">\r\n				<br>\r\n				<img src=\"./images/dxc-dashboard-logo.png\" href=\"\" alt=\"Logo\">\r\n			</div>\r\n		</div>\r\n\r\n	</div>\r\n\r\n</div>\r\n";
+},"useData":true});
+templates['hbNav3'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "  "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["sub-nav-item"] : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + " ";
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "\r\n			<li class=\"nav-item dropdown\">\r\n				<a class=\"nav-link dropdown-toggle main-red\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n					"
+    + container.escapeExpression(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\r\n				</a>\r\n\r\n				<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n					"
+    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0["sub-nav-item"] : depth0),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n				</div>\r\n			</li>\r\n			 ";
+},"3":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return " "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["data-filter"] : depth0),{"name":"if","hash":{},"fn":container.program(4, data, 0),"inverse":container.program(6, data, 0),"data":data})) != null ? stack1 : "")
+    + " ";
+},"4":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "\r\n					<a class=\"dropdown-item filter-link main-red\" data-filter=\""
+    + alias4(((helper = (helper = helpers["data-filter"] || (depth0 != null ? depth0["data-filter"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"data-filter","hash":{},"data":data}) : helper)))
+    + "\" href=\""
+    + alias4(((helper = (helper = helpers["sub-nav-link"] || (depth0 != null ? depth0["sub-nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackSubNavLink(\""
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "\")'>"
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "</a> ";
+},"6":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "\r\n					<a class=\"dropdown-item main-red\" href=\""
+    + alias4(((helper = (helper = helpers["sub-nav-link"] || (depth0 != null ? depth0["sub-nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackNavigationLink(\""
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "\")'>"
+    + alias4(((helper = (helper = helpers["sub-nav-title"] || (depth0 != null ? depth0["sub-nav-title"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"sub-nav-title","hash":{},"data":data}) : helper)))
+    + "</a> ";
+},"8":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return " "
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["data-filter"] : depth0),{"name":"if","hash":{},"fn":container.program(9, data, 0),"inverse":container.program(11, data, 0),"data":data})) != null ? stack1 : "")
+    + " ";
+},"9":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "\r\n			<li class=\"nav-item\">\r\n				<a class=\"nav-link filter-link main-red\" data-filter=\""
+    + alias4(((helper = (helper = helpers["data-filter"] || (depth0 != null ? depth0["data-filter"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"data-filter","hash":{},"data":data}) : helper)))
+    + "\" href=\""
+    + alias4(((helper = (helper = helpers["nav-link"] || (depth0 != null ? depth0["nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackMainNavLink(\""
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\")' aria-haspopup=\"true\" aria-expanded=\"false\">\r\n					"
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\r\n				</a>\r\n			</li>\r\n";
+},"11":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "			<li class=\"nav-item\">\r\n				<a class=\"nav-link main-red\" href=\""
+    + alias4(((helper = (helper = helpers["nav-link"] || (depth0 != null ? depth0["nav-link"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-link","hash":{},"data":data}) : helper)))
+    + "\" onclick='trackMainNavLink(\""
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\")' aria-haspopup=\"true\" aria-expanded=\"false\">\r\n					"
+    + alias4(((helper = (helper = helpers["nav-text"] || (depth0 != null ? depth0["nav-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"nav-text","hash":{},"data":data}) : helper)))
+    + "\r\n				</a>\r\n			</li>\r\n			";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div id=\"header\">\r\n	<div id=\"department-row\" class=\"\">\r\n	<!-- Department Row -->\r\n		<div class=\"row\">\r\n			<div id=\"logo\" class=\"hide-for-small\">\r\n				<a href=\"./index.html\" onclick='trackMainNavLink(\"DXC Logo\")'>\r\n					<img alt=\"DXC Technology\" src=\"./images/styles/logo-white.png\">\r\n					\r\n				</a>\r\n			</div>\r\n			<div class=\"col\">\r\n				<a href=\"#\" class=\"left-off-canvas-toggle menu-icon hide-for-xlarge-up\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\"><i class=\"fa fa-bars\"></i></a>\r\n				<div class=\"divider hide-for-xlarge-up\"></div>\r\n				<div class=\"site-title hide-text\">\r\n					\r\n				</div>\r\n			</div>\r\n				<div style=\"text-align:right\" class=\"site-title\">\r\n					The Innovation Metropolis\r\n				</div>\r\n		</div>\r\n	</div>\r\n</div>\r\n\r\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n	<div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n		<ul class=\"navbar-nav\">\r\n			<li class=\"home-icon main-red\">\r\n				<a href=\"./index.html\" onclick='trackMainNavLink(\"Home\")'>\r\n					<i class=\"fa fa-home\"></i>\r\n				</a>\r\n			</li>\r\n\r\n			"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["main-nav-items"] : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n		</ul>\r\n	</div>\r\n</nav>";
+},"useData":true});
+templates['hbSpotlight'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "	<div class=\"spotlight\">\r\n		<img src=\"./images/slideshow/slideshow1.jpg\" alt=\""
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\">\r\n		<div class=\"overlay\">\r\n			<h2>"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h2>\r\n			<p>"
+    + alias4(((helper = (helper = helpers.about || (depth0 != null ? depth0.about : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"about","hash":{},"data":data}) : helper)))
+    + "</p>\r\n			<a class=\"button small\" "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0["data-filter"] : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + " href=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias4(((helper = (helper = helpers["link-text"] || (depth0 != null ? depth0["link-text"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link-text","hash":{},"data":data}) : helper)))
+    + "</a>\r\n		</div>\r\n	</div>\r\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "data-filter=\""
+    + container.escapeExpression(((helper = (helper = helpers["data-filter"] || (depth0 != null ? depth0["data-filter"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"data-filter","hash":{},"data":data}) : helper)))
+    + "\"";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div id=\"slideshow\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.spotlight : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>";
+},"useData":true});
+templates['hbTiles'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"cols-3 equal-height has-tiles no-edge-padding\" id=\"tour-tiles\">\r\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.tile : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</div>\r\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "	<div class=\"col\">\r\n		<a class=\"dxc-tile type1\" href=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\">\r\n			<span class=\"tile-title\">"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</span>\r\n			<span class=\"tile-desc\">"
+    + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
+    + "</span>\r\n		</a>\r\n	</div>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0["tile-row"] : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
+},"useData":true});
+})();

@@ -1,0 +1,5 @@
+0,Booking,*,*,Sure! When you want to book for?,Booking.aiml
+0,Make a Booking,*,*,<srai>Booking</srai>,Booking.aiml
+0,_ Booking,*,*,<srai>Booking</srai>,Booking.aiml
+0,Book a meeting with _,*,*,Alright! Meeting with <set name = "bookWith"><star/></set> ! When do you want to book for? <star/> is free on Tuesday and Friday.,Booking.aiml
+0,Tuesday,*,*,You already booked a meeting with <get name = "bookWith"/> on Tuesday!,Booking.aiml

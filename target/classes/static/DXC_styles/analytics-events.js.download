@@ -1,0 +1,131 @@
+(function (i, s, o, g, r, a, m) {
+	i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+		(i[r].q = i[r].q || []).push(arguments)
+	}, i[r].l = 1 * new Date(); a = s.createElement(o),
+	m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-104160738-2', 'auto');
+ga('send', 'pageview');
+
+// Home Page
+
+var trackFirstTime = function(url) {
+	ga('send', 'event', 'index', 'first-time', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackIndexFeatures = function(url) {
+	ga('send', 'event', 'index', 'features', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackIndexSpotlight = function(url) {
+	ga('send', 'event', 'index', 'spotlight', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackIndexEvents = function(url) {
+	ga('send', 'event', 'index', 'event', url, {
+		'transport': 'beacon'
+	});
+}
+
+// Navigation Bar
+var trackMainNavLink = function(url) {
+	ga('send', 'event', 'navigation', 'main', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackSubNavLink = function(url) {
+	ga('send', 'event', 'navigation', 'sub', url, {
+		'transport': 'beacon'
+	});
+}
+
+// Hints
+var trackHints = function(url) {
+	ga('send','event', 'hint', 'hint', url, {
+		'transport': 'beacon'
+	});
+}
+
+// Card Columns
+var trackCardsLink = function(url) {
+	ga('send', 'event', 'cards', 'outbound-click', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackFilters = function(url) {
+	ga('send', 'event', 'filter', 'button', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackHashtags = function(url) {
+	ga('send', 'event', 'filter', 'hashtag', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackSearch = function(url) {
+	ga('send', 'event', 'filter', 'search', url, {
+		'transport': 'beacon'
+	});
+}
+
+// Innovation Events
+var trackEventsView = function(url) {
+	ga('send', 'event', 'events-view', 'view', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackEventsCalendar = function(url) {
+	ga('send', 'event', 'event-calendar', 'meetup-event', url, {
+		'transport': 'beacon'
+	});
+}
+
+var trackEventsCard = function(url) {
+	ga('send', 'event', 'event-cards', 'meetup-card', url, {
+		'transport': 'beacon'
+	});
+}
+
+// Project Journey
+var trackProjectJourney = function(url) {
+	ga('send', 'event', 'project-journey', 'infographic', url, {
+		'transport': 'beacon'
+	});
+}
+
+
+// var trackIndexLink = function(url) {
+// 	ga('send', 'event', 'index', 'quick-link', url, {
+// 		'transport': 'beacon'
+// 	});
+// }
+
+// var trackWheelLink = function(url) {
+// 	ga('send', 'event', 'filter', 'wheel', url, {
+// 		'transport': 'beacon'
+// 	});
+// }
+
+// var trackIndexRightPanel = function(url) {
+// 	ga('send', 'event', 'index', 'right-panel', url, {
+	// 		'transport': 'beacon'
+	// 	});
+	// }
+
+// var trackIndexSlideshow = function(url) {
+// 	ga('send', 'event', 'index', 'slideshow', url, {
+// 		'transport': 'beacon'
+// 	});
+// }

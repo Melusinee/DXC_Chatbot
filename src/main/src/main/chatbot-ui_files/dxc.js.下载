@@ -1,0 +1,3 @@
+function clearPlaceHolder(){
+    document.getElementById("text-input-text").value = "";
+}

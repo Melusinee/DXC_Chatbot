@@ -1,0 +1,2 @@
+0,I am *,*,*, Hello <set name = "username"> <star/>! </set>,data.aiml
+0,See you,*,*, See you <get name = "username"/> Thanks for the conversation!,data.aiml

@@ -1,0 +1,38 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version="1.0.1" encoding = "UTF-8"?>
+   <category>
+      <pattern>Booking</pattern>
+      <template>
+         Sure! When you want to book for?
+      </template>
+   </category>
+
+   <category>
+     <pattern>Book a meeting with *</pattern>
+     <template>
+        Alright! Meeting with <set name = "bookWith"><star/></set> ! When do you want to book for? <star/> is free on Tuesday and Friday.
+     </template>
+   </category>
+
+   <category>
+     <pattern>Tuesday</pattern>
+     <template>
+        You already booked a meeting with <get name = "bookWith"/> on Tuesday!
+     </template>
+   </category>
+
+   <category>
+       <pattern>Make a Booking</pattern>
+       <template>
+           <srai>Booking</srai>
+       </template>
+   </category>
+
+   <category>
+       <pattern>_ Booking</pattern>
+       <template>
+           <srai>Booking</srai>
+       </template>
+   </category>
+
+</aiml>

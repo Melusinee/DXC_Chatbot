@@ -1,0 +1,40 @@
+	// LexWebUi supports numerous configuration options. Here
+	// is an example using just a couple of the required options.
+	AWS.config.update({region: 'us-east-1'});
+	AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east-1:561b0a5e-9348-4d32-abf2-829235fb9d8a'});
+
+	// var DXCemail
+
+	// cognitoUser.getUserAttributes(function(err, result) {
+		// for (i = 0; i < result.length; i++) {
+		// 	console.log(result[3].Value)
+		// 	console.log(result)
+		// }
+	
+		// DXCemail = result[3].Value
+		// console('user email: ', DXCemail);
+
+		var config = {
+			cognito: {
+				// Your Cognito Pool Id - this is required to provide AWS credentials
+				poolId: 'us-east-1:561b0a5e-9348-4d32-abf2-829235fb9d8a'
+			},
+			lex: {
+				// Lex Bot Name in your account
+				botName: 'MetropolisBot',
+				// initialText: "Hi test" + ". Welcome to DXC Innovation. You can ask me to find innovation content or meetups. For content, type 'search articles' or click on the mic and say it. For meetups, type 'find upcoming meetups' or click on the mic and say it."
+				// initialText: "Hi " + DXCusername + ". Welcome to DXC Innovation. You can ask me to find innovation content or meetups. For content, type 'search articles' or click on the mic and say it. For meetups, type 'find upcoming meetups' or click on the mic and say it.",
+				initialText: "Hi. " + "Welcome to DXC Innovation. You can ask me to find innovation content or meetups. For content, type 'search articles' or click on the mic and say it. For meetups, type 'find upcoming meetups' or click on the mic and say it.",
+			}
+		};
+		// load the LexWebUi component
+		var lexWebUi = new LexWebUi.Loader(config);
+		// instantiate Vue
+		new Vue({
+			el: '#lex-web-ui',
+			store: lexWebUi.store,
+			template: '<div id="lex-web-ui-app"><lex-web-ui/></div>',
+		});
+
+	// });
+

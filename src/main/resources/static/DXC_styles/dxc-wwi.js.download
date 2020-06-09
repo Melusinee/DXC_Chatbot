@@ -1,0 +1,26 @@
+// =====================================================================================
+// <copyright>
+// Loader: WWS JS and CSS
+// </copyright>
+// =====================================================================================
+
+console.log("Loaded: dxc-wwi.js");
+var WheelCogPressed
+
+$(document).on('click','.filter-link',function(event){
+	/*console.log('Filter-Button Clicked')*/
+	/*console.log($(this))*/
+				//Extract category and spoke then convet to array
+				var filter = $(this).data('filter').split(',');
+				setGlobalFilter(filter)
+			});
+
+//Use function to save global filter across pages
+function setGlobalFilter(filterArray){
+	globalFilter = []
+	for (var i = filterArray.length - 1; i >= 0; i--) {
+		globalFilter.push(filterArray[i])
+	}
+	localStorage["globalFilter"] = JSON.stringify(globalFilter);
+	console.log('Global Filter', globalFilter)
+}

@@ -1,0 +1,15 @@
+MetroAPIInvokeURL = "https://5fagp28l9e.execute-api.ap-southeast-2.amazonaws.com/Development/";
+MetroAnalyticsAPILambda = "Innovation-Metropolis-Dev-AnalyticsApiLambda-1IVZBJEOO71CL";
+MetroCSVLambda = "Innovation-Metropolis-Dev-CSVFeedLambda-1QQBBVD1U8WIX";
+MetroInnovationContentAPILambda = "Innovation-Metropolis-Dev-InnovationContentApiLamb-Z467ZZGB382C";
+MetroInnovationItemsAPILambda = "Innovation-Metropolis-Dev-InnovationApiLambda-1TCCE73N9SLMW";
+MetroInnovationItemsDDBName = "Innovation-Metropolis-Dev-InnovationItemsDynamoDB-PJPX2FYVYAMP";
+MetroRSSLambda = "Innovation-Metropolis-Dev-RSSFeedLambda-5FOP31D80J9R";
+MetroSiteBucketDomainName = "innovation-metropolis-development-cxi9lxmhjeldemyc5fmnqw.s3.amazonaws.com";
+MetroSiteBucketName = "innovation-metropolis-development-cxi9lxmhjeldemyc5fmnqw";
+MetroSiteBucketWebsiteURL = "http://innovation-metropolis-development-cxi9lxmhjeldemyc5fmnqw.s3-website-ap-southeast-2.amazonaws.com";
+MetroUserPoolClientId = "magkhnlhm6eikigqshpbv05bq";
+MetroUserPoolId = "ap-southeast-2_hT7fk720Z";
+MetropolisCloudFrontDistributionId = "E1NJP5G717BHT7";
+MetropolisCloudFrontOriginAccessIdentity = "E1WL8LEJXDEBRE";
+MetropolisWAFWebsiteACL = "5c357e5f-6eaa-44bd-b456-e530c7382f41";

@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version="1.0.1" encoding = "UTF-8"?>
+   <category>
+      <pattern>HELLO</pattern>
+      <template>
+         Hello! My name is Dexter! The DXC chatbot.Here are my functionalities: 1) book a meeting 2) find events 3) find meet-ups 4)search for articles
+      </template>
+   </category>
+
+      <category>
+       <pattern>hi</pattern>
+       <template>
+           <srai>HELLO</srai>
+       </template>
+   </category>
+
+  <category>
+       <pattern>hi *</pattern>
+       <template>
+           <srai>HELLO</srai>
+       </template>
+   </category>
+
+   <category>
+        <pattern>hello *</pattern>
+        <template>
+            <srai>HELLO</srai>
+        </template>
+    </category>
+
+    <category>
+       <pattern>Bye</pattern>
+       <template>
+         <random>
+           <li> See you! </li>
+           <li> Catch you later! </li>
+           <li> Bye Bye! </li>
+           <li> Goodbye! </li>
+        </random>
+       </template>
+    </category>
+
+
+</aiml>

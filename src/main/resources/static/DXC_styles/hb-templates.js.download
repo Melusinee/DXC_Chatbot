@@ -1,0 +1,61 @@
+//////////////////////////////////////////////////
+//Templates
+//////////////////////////////////////////////////
+
+function hbHead() {
+	var context = {
+		'title': 'DXC Technology | What We Innovate | DXC Technology'
+	};
+	var templateScript = Handlebars.templates.hbHead( context );
+	$( document.head )
+	.prepend( templateScript );
+}
+
+function hbNav() {
+	$.getJSON( './data/nav.json', function( context ) {
+		var templateScript = Handlebars.templates.hbNav( context );
+		$( 'nav' )
+		.prepend( templateScript );
+	} );
+}
+
+function hbNav2() {
+	$.getJSON( './data/nav.json', function( context ) {
+		var templateScript = Handlebars.templates.hbNav2( context );
+		$( 'nav' )
+		.prepend( templateScript );
+	} );
+}
+
+function hbNav3() {
+	$.getJSON( './data/nav.json', function( context ) {
+		var templateScript = Handlebars.templates.hbNav3( context );
+		$( 'nav' )
+		.prepend( templateScript );
+	} );
+}
+
+function hbMain() {
+	var context = {};
+	var templateScript = Handlebars.templates.hbMain( context );
+	$( 'main' )
+	.append( templateScript );
+}
+
+function hbFilters() {
+	$.getJSON( './data/filters.json' )
+	.done( function( context ) {
+		var templateScript = Handlebars.templates.hbFilters( context );
+		$( '#filters' )
+		.append( templateScript );
+	} );
+}
+
+function hbCurrentFilters() {
+	$.getJSON( './data/currentfilters.json' )
+	.done( function( context ) {
+		var templateScript = Handlebars.templates.hbCurrentFilters( context );
+		$( '#currentfilters' )
+		.append( templateScript );
+	} );
+}

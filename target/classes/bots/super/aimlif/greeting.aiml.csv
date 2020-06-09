@@ -1,0 +1,5 @@
+0,HELLO,*,*,Hello! My name is Dexter! The DXC chatbo.Here are my functionalities: 1) book a meeting 2) find events 3) find meet-ups 4)search for articles,greeting.aiml
+0,hi,*,*,<srai>HELLO</srai>,greeting.aiml
+0,hi *,*,*,<srai>HELLO</srai>,greeting.aiml
+0,hello *,*,*,<srai>HELLO</srai>,greeting.aiml
+0,Bye,*,*,<random><li> See you! </li><li> Catch you later! </li><li> Bye Bye! </li><li> Goodbye! </li></random>,greeting.aiml

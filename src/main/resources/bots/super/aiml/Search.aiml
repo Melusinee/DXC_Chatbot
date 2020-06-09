@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version="1.0.1" encoding = "UTF-8"?>
+   <category>
+      <pattern>Search * articles for me</pattern>
+      <template>
+         Sure! This are the articles relate to <star/> 1."XXXXXX" 2."XXXXX"
+      </template>
+   </category>
+
+   <category>
+      <pattern>Search an * event for me</pattern>
+      <template>
+         Sure! This are the events relate to <star/> that I found! We can identified your location as Sydney Inner West. On Monday Even Speiglman will host a talk on Growth Hacks for Tech Startups in Surry Hills. Click 'here' to register.
+      </template>
+   </category>
+
+   <category>
+      <pattern>find meetups</pattern>
+      <template>
+         Sure! I can see there is a meetup happening this month at the White Rabbit lounge in Glebe. Would you like to register?
+      </template>
+   </category>
+
+   <category>
+      <pattern>Register please</pattern>
+      <template>
+         Fantasic, click 'here' to register
+      </template>
+   </category>

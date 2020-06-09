@@ -1,0 +1,172 @@
+'use strict';
+
+//////////////////////////////////////////////////
+// Helpers
+//////////////////////////////////////////////////
+
+Handlebars.registerHelper('formatDate', function (string) {
+	var result = moment(string).format('DD/MM/YYYY HH:mm');
+	return result;
+});
+
+Handlebars.registerHelper('filterButtonClass', function (string) {
+	var result = string;
+	// var result = string.replace( /[,\s]/g, '-' );
+	return result;
+});
+
+var cardTags = [];
+var tagsCount;
+var tagsArrayCount;
+
+//Extract cardTags once and use this to pass to another function
+//requires all tags, such as hashtag, class and icons
+Handlebars.registerHelper('extractTags', function (card) {
+	//This function pulls out all the relevant metadata for filtering, if more data is requied add it under here
+	cardTags = [];
+
+	tagsCount = 0;
+	tagsArrayCount = 0;
+
+	//Extract all metadata and push into cardTags
+
+	for (var key in card.metadata) {
+		var value = card.metadata[key];
+		var type = $.type(value);
+
+		cardTags[key] = [];
+
+		//cardTags.push(key[]);
+
+		switch (type) {
+			case 'string':
+				//$.trim(value);
+				//console.log(value)
+				if (value !== '') {
+					cardTags[key].push($.trim(value));
+				}
+				break;
+			case 'array':
+				for (var i = value.length - 1; i >= 0; i--) {
+					if (value[i] !== '') {
+						cardTags[key].push($.trim(value[i]));
+					}
+				}
+		}
+	}
+
+	// console.log(tagsCount + tagsArrayCount);
+
+	//Extract the content type and place into cardTags
+	if ('contentType' in card) cardTags['contentType'] = [card.contentType];
+
+	//Extract the source type and place into cardTags
+	if ('source' in card) cardTags['source'] = [card.source];
+
+	//Extract the wheel category and spoke and place into cardTags
+	for (var key in card.wheel) {
+		var value = card.wheel[key];
+		var type = $.type(value);
+		// console.log(key)
+		cardTags[key] = [];
+
+		switch (type) {
+			case 'string':
+				//$.trim(value);
+				//console.log(value)
+				if (value !== '') {
+					cardTags[key].push($.trim(value));
+				}
+				break;
+			case 'array':
+				for (var i = value.length - 1; i >= 0; i--) {
+					if (value[i] !== '') {
+						cardTags[key].push($.trim(value[i]));
+					}
+				}
+		}
+	}
+});
+
+Handlebars.registerHelper('hashtags', function (card) {
+	var result = '';
+	for (var key in cardTags) {
+		for (var tag in cardTags[key]) {
+			tag = cardTags[key][tag];
+			result += '<span class="m-1 badge cardhashtag ' + tag.toLowerCase().replace(/[,\s]/g, '') + '">#' + tag + '</span>';
+		}
+	}
+	return result;
+});
+
+Handlebars.registerHelper('createFilterClass', function (card) {
+	var result = '';
+	for (var key in cardTags) {
+		for (var tag in cardTags[key]) {
+			tag = cardTags[key][tag];
+			result += tag + ' ';
+		}
+	}
+	return result;
+});
+
+Handlebars.registerHelper('validateCardTitle', function (card, url, cardTitle) {
+
+	if (card.source == "Lenovo") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "AWS") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "Dell EMC") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "SAP") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "ServiceNow") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "Oracle") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "AT&T") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	} else if (card.source == "Microsoft") {
+		return new Handlebars.SafeString('<h5 class="card-header card-colour">' + "Partners: " + cardTitle + '</h5>');
+	}
+
+
+	for (var i in card.metadata) {
+		// console.log(card.metadata[i]);
+
+		if (card.metadata[i].includes("Blog") && card.metadata[i].includes("DXC Technology")) {
+			return new Handlebars.SafeString('<h5 class="card-header card-blog">' + "Blog: " + cardTitle + '</h5>');
+		} else if (card.metadata[i].includes("DXC Blogs")) {
+			return new Handlebars.SafeString('<h5 class="card-header card-blog">' + "Blog: " + cardTitle + '</h5>');
+		} else if (url.includes("blogs.dxc")) {
+			return new Handlebars.SafeString('<h5 class="card-header card-blog">' + "Blog: " + cardTitle + '</h5>');
+		}
+	}
+
+	if (url.includes("./innovator-stories")) {
+		return new Handlebars.SafeString('<h5 class="card-header card-story">' + '<i class="fa fa-lightbulb-o card-story"></i>' + " Innovator Story - " + cardTitle + '</h5>');
+	} else if (url.includes("www.meetup")) {
+		return new Handlebars.SafeString('<h5 class="card-header card-meetup">' + '<i class="fa fa-meetup card-meetup"></i>' + " " + cardTitle + '</h5>');
+	} else if (url.includes("facebook")) {
+		return new Handlebars.SafeString('<h5 class="card-header card-facebook">' + '<i class="fa fa-facebook card-facebook"></i>' + " " + cardTitle + '</h5>');
+	} else if (url.includes("video.dxc") || url.includes("youtube")) {
+		return new Handlebars.SafeString('<h5 class="card-header card-video">' + '<i class="fa fa-video-camera card-video"></i>' + " " + cardTitle + '</h5>');
+	} else {
+		return new Handlebars.SafeString('<h5 class="card-header">' + cardTitle + '</h5>');
+	}
+});
+
+// TODO: How to remove only the organization icons?
+Handlebars.registerHelper('getIcons', function (card) {
+	var result = '';
+	for (var key in cardTags) {
+		if (key != 'organisation' && key != 'category' && key != 'spoke') {
+			for (var tag in cardTags[key]) {
+				tag = cardTags[key][tag];
+				filename = tag.toLowerCase().replace(/[,\s]/g, '');
+				result += result = '<img class="content-icon" src="./images/icons/' + filename + '.png" alt="' + tag + '" title="' + tag + '" style="width:10%;height:10%;">';
+			}
+		}
+	}
+	return result;
+});
