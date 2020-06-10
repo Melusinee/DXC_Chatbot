@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73676e2f-1335-48e4-8ef8-49f8df8d1bc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/StaffService.java" afterDir="false" />
+    <list default="true" id="73676e2f-1335-48e4-8ef8-49f8df8d1bc7" name="Default Changelist" comment="Update the save Staff function (Currently NOT WORKING, need to be fixed)">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/impl/StaffServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/ChatbotDemo.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/service/StaffService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/service/impl/StaffServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/controller/ChabotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/controller/ChabotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/dao/IMeetingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/dao/IMeetingDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/dao/IStaffDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/dao/IStaffDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/MeetingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/impl/MeetingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/impl/MeetingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/StaffService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbcConfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/controller/ChabotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/controller/ChabotController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/dao/IMeetingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/dao/IMeetingDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/dao/IStaffDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/dao/IStaffDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/service/MeetingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/service/MeetingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/service/impl/MeetingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/service/impl/MeetingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbcConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbcConfig.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cwDwE89qYQoW8tdkgulIdd2a4Q" />
@@ -65,7 +69,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../All Mybatis Study/day04_04annoOneToMany" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../All SpringMVC study/ssm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -126,12 +130,24 @@
       <workItem from="1591431000818" duration="2140000" />
       <workItem from="1591433466132" duration="264000" />
       <workItem from="1591433762787" duration="130000" />
-      <workItem from="1591433910510" duration="25545000" />
+      <workItem from="1591433910510" duration="31092000" />
     </task>
+    <task id="LOCAL-00001" summary="Update the save Staff function (Currently NOT WORKING, need to be fixed)">
+      <created>1591726859919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591726859920</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update the save Staff function (Currently NOT WORKING, need to be fixed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the save Staff function (Currently NOT WORKING, need to be fixed)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1591722466392">
@@ -146,10 +162,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="790" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1591560347134" />
-    <state x="901" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1591722862398">
+    <state x="901" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1591774911638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="901" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591722862398" />
+    <state x="901" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591774911638" />
     <state x="601" y="330" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1591602922742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -158,46 +174,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="629" y="330" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1536.824@0.0.1536.824" timestamp="1591602925842" />
-    <state x="762" y="101" key="FileChooserDialogImpl" timestamp="1591724814891">
+    <state x="357" y="6" key="CommitChangelistDialog2" timestamp="1591726936943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="762" y="101" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591724814891" />
-    <state width="817" height="124" key="GridCell.Tab.0.bottom" timestamp="1591726764748">
+    <state x="357" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591726936943" />
+    <state x="762" y="101" key="FileChooserDialogImpl" timestamp="1591774742694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.0.center" timestamp="1591726764748">
+    <state x="762" y="101" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591774742694" />
+    <state width="817" height="149" key="GridCell.Tab.0.bottom" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.0.left" timestamp="1591726764748">
+    <state width="817" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.0.center" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.0.right" timestamp="1591726764748">
+    <state width="817" height="149" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.0.left" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.1.bottom" timestamp="1591726764748">
+    <state width="817" height="149" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.0.right" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.1.center" timestamp="1591726764748">
+    <state width="817" height="149" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.1.bottom" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.1.left" timestamp="1591726764748">
+    <state width="817" height="149" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.1.center" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state width="817" height="124" key="GridCell.Tab.1.right" timestamp="1591726764748">
+    <state width="817" height="149" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.1.left" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="124" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591726764748" />
-    <state x="540" y="33" key="SettingsEditor" timestamp="1591722652654">
+    <state width="817" height="149" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="149" key="GridCell.Tab.1.right" timestamp="1591775342389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="540" y="33" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591722652654" />
+    <state width="817" height="149" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state x="153" y="0" key="SettingsEditor" timestamp="1591778054664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="153" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591778054664" />
+    <state x="722" y="169" key="Vcs.Push.Dialog.v2" timestamp="1591727032706">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="722" y="169" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591727032706" />
     <state x="563" y="103" width="642" height="534" key="find.popup" timestamp="1591433825511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

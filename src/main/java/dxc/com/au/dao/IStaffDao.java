@@ -1,10 +1,7 @@
 package dxc.com.au.dao;
 
 import dxc.com.au.domain.Staff;
-import org.apache.ibatis.annotations.Many;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -19,6 +16,7 @@ public interface IStaffDao {
     )
     List<Staff> findAll();
 
+    @Insert("insert into staff (name,id,meetingId) values (#{name},#{id},#{meetingId})")
     void saveStaff(Staff staff);
 
 }

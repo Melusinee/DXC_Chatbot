@@ -10,4 +10,5 @@ public interface StaffService {
     void init() throws Exception;
     void destory() throws Exception;
     List<Staff> findAllStaffs() throws Exception;
+    void saveStaff(Staff staff) throws Exception;
 }

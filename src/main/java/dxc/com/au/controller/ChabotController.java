@@ -29,7 +29,6 @@ public class ChabotController {
     private MeetingService meetingService;
     @Autowired
     private StaffService staffService;
-    private IStaffDao staffDao;
 
     @RequestMapping(value = "/botResponse",method = RequestMethod.GET)
     @ResponseBody
@@ -72,12 +71,12 @@ public class ChabotController {
 //                    System.out.println("enter add staff function");
                     String name = message.split(" ")[6];
                     Integer id = Integer.parseInt(message.split(" ")[9]);
-                    Integer meetingId = 1;
+//                    Integer meetingId = 1;
                     Staff staff = new Staff();
                     staff.setName(name);
                     staff.setId(id);
-                    staff.setMeetingId(meetingId);
-                    staffDao.saveStaff(staff);
+//                    staff.setMeetingId(meetingId);
+                    staffService.saveStaff(staff);
                     response = "Already saved staff" + staff.toString();
                 }
                 response = overWriteBotResponse(response);
