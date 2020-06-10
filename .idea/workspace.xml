@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73676e2f-1335-48e4-8ef8-49f8df8d1bc7" name="Default Changelist" comment="Update the save Staff function (Currently NOT WORKING, need to be fixed)">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/impl/StaffServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/ChatbotDemo.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/service/StaffService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/service/impl/StaffServiceImpl.class" afterDir="false" />
+    <list default="true" id="73676e2f-1335-48e4-8ef8-49f8df8d1bc7" name="Default Changelist" comment="Add the save staff function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/controller/ChabotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/controller/ChabotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/dao/IStaffDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/dao/IStaffDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dxc/com/au/service/StaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/controller/ChabotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/controller/ChabotController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dxc/com/au/dao/IStaffDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dxc/com/au/dao/IStaffDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +118,7 @@
       <workItem from="1591431000818" duration="2140000" />
       <workItem from="1591433466132" duration="264000" />
       <workItem from="1591433762787" duration="130000" />
-      <workItem from="1591433910510" duration="31092000" />
+      <workItem from="1591433910510" duration="31546000" />
     </task>
     <task id="LOCAL-00001" summary="Update the save Staff function (Currently NOT WORKING, need to be fixed)">
       <created>1591726859919</created>
@@ -139,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591726859920</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add the save staff function">
+      <created>1591778956515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591778956516</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update the save Staff function (Currently NOT WORKING, need to be fixed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the save Staff function (Currently NOT WORKING, need to be fixed)" />
+    <MESSAGE value="Add the save staff function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the save staff function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1591722466392">
@@ -174,46 +170,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="629" y="330" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1536.824@0.0.1536.824" timestamp="1591602925842" />
-    <state x="357" y="6" key="CommitChangelistDialog2" timestamp="1591726936943">
+    <state x="357" y="6" key="CommitChangelistDialog2" timestamp="1591779442031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="357" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591726936943" />
+    <state x="357" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591779442031" />
     <state x="762" y="101" key="FileChooserDialogImpl" timestamp="1591774742694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="762" y="101" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591774742694" />
-    <state width="817" height="149" key="GridCell.Tab.0.bottom" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.0.bottom" timestamp="1591778980087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.0.center" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591778980087" />
+    <state width="817" height="289" key="GridCell.Tab.0.center" timestamp="1591778980086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.0.left" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591778980086" />
+    <state width="817" height="289" key="GridCell.Tab.0.left" timestamp="1591778980086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.0.right" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591778980086" />
+    <state width="817" height="289" key="GridCell.Tab.0.right" timestamp="1591778980086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.1.bottom" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591778980086" />
+    <state width="817" height="289" key="GridCell.Tab.1.bottom" timestamp="1591778980088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.1.center" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591778980088" />
+    <state width="817" height="289" key="GridCell.Tab.1.center" timestamp="1591778980087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.1.left" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591778980087" />
+    <state width="817" height="289" key="GridCell.Tab.1.left" timestamp="1591778980087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
-    <state width="817" height="149" key="GridCell.Tab.1.right" timestamp="1591775342389">
+    <state width="817" height="289" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591778980087" />
+    <state width="817" height="289" key="GridCell.Tab.1.right" timestamp="1591778980087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="817" height="149" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591775342389" />
+    <state width="817" height="289" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591778980087" />
     <state x="153" y="0" key="SettingsEditor" timestamp="1591778054664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
