@@ -23,7 +23,7 @@
 ```
 如果添加依赖不成功，可以手动将对应的jar包安装至maven对应的文件夹，形成本地依赖文件，对应的Ab.jar已经添加到master路径下的Others Utilities 文件夹中
 ## 使用技术栈：
-Spring, SpringMVC，Mybatis, MySql, AliceBot, AIML <br>
+SpringBoot，Mybatis, MySql, AliceBot, AIML <br>
 HTML,JavaScript,Ajax (这一行为实习同组组员负责完成)
 
 ## 现有功能
